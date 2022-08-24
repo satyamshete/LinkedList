@@ -53,5 +53,17 @@ namespace LinkedList
             }
             Console.WriteLine();
         }
+        public void AddNodeAtFirst(int data)
+        {
+            Node node = new Node(data);
+            node.Next = Head;
+            Head = node;
+            if (Tail == null)
+            {
+                Tail = node;
+            }
+
+            Console.WriteLine("{0} is Added ", data);
+        }
     }
 }
