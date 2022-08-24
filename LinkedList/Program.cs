@@ -15,6 +15,7 @@
             Console.WriteLine("Press 7 for search a node");
             Console.WriteLine("Press 8 for insert node at specific position ");
             Console.WriteLine("Press 9 for delete node at specific position ");
+            Console.WriteLine("Press 10 for Add element and sort in linkedlist ");
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -83,6 +84,11 @@
                     linkedList.DisplayNode();
                     linkedList.DeleteInBetween(40);
                     linkedList.DisplayNode();
+                    break;
+                case 10:
+                    linkedList.SortLinkedList();
+                    linkedList.DisplayNode();
+
                     break;
                 default:
                     Console.WriteLine("Make proper selection");
