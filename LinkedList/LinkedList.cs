@@ -138,5 +138,26 @@ namespace LinkedList
             }
 
         }
+        public void SearchNode(int data)
+        {
+           
+            Node temp = Head;
+            int Count = 0;
+            while (temp != null)
+            {
+                if (temp.Data == data)
+                {
+                    Count++;
+                    Console.WriteLine("{0} Elements is present ", data);
+                    break;
+                }
+                temp = temp.Next;
+            }
+            if (Count == 0)
+            {
+                Console.WriteLine("{0} Elements is not present ", data);
+            }
+
+        }
     }
 }
