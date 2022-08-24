@@ -118,5 +118,25 @@ namespace LinkedList
             }
 
         }
+        public void DeleteLastElement()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("No elements present ");
+            }
+            else
+            {
+                Node temp = Head;
+                while (temp.Next.Next != Tail)
+                {
+                    temp = temp.Next;
+                }
+                Tail = temp.Next;
+                temp = temp.Next;
+                temp.Next = null;
+
+            }
+
+        }
     }
 }
