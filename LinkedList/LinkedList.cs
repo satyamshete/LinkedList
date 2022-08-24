@@ -65,5 +65,45 @@ namespace LinkedList
 
             Console.WriteLine("{0} is Added ", data);
         }
+        public void AddInBetween(int data)
+        {
+            Console.WriteLine("Enter Previous element");
+            int previous = int.Parse(Console.ReadLine());
+            Node node = new Node(data);
+            Node temp = Head;
+            if (Head == null)
+            {
+                Console.WriteLine("No elements present in ");
+            }
+            else
+            {
+                int Count = 0;
+                while (temp != null)
+                {
+                    if (temp.Data == previous && Tail.Data != previous)
+                    {
+                        Count++;
+                        node.Next = temp.Next;
+                        temp.Next = node;
+                        Console.WriteLine("{0} Element added ", data);
+                        break;
+                    }
+                    if (Tail.Data == previous)
+                    {
+                        AddNodeAtLast(data);
+                        break;
+                    }
+                    temp = temp.Next;
+                }
+                if (Count == 0)
+                {
+
+                    Console.WriteLine("{0} Element is not added ", data);
+                }
+
+
+            }
+
+        }
     }
 }
