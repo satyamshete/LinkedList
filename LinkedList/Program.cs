@@ -10,6 +10,7 @@
             Console.WriteLine("Press 2 for add node at first (Add)");
             Console.WriteLine("Press 3 for add node at last (Append)");
             Console.WriteLine("Press 4 for insert a node ");
+            Console.WriteLine("Press 5 for delete node at first  ");
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -36,6 +37,14 @@
                     linkedList.AddNodeAtLast(70);
                     linkedList.DisplayNode();
                     linkedList.AddInBetween(30);
+                    linkedList.DisplayNode();
+                    break;
+                case 5:
+                    linkedList.AddNodeAtLast(56);
+                    linkedList.AddNodeAtLast(30);
+                    linkedList.AddNodeAtLast(70);
+                    linkedList.DisplayNode();
+                    linkedList.DeleteFirstelement();
                     linkedList.DisplayNode();
                     break;
                 default:

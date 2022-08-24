@@ -105,5 +105,18 @@ namespace LinkedList
             }
 
         }
+        public void DeleteFirstelement()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine("No elements present ");
+            }
+            else
+            {
+                Head = Head.Next;
+                Console.WriteLine("Deleted the first element");
+            }
+
+        }
     }
 }
