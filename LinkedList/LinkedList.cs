@@ -159,5 +159,27 @@ namespace LinkedList
             }
 
         }
+        public void DeleteInBetween(int data)
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("No elements present ");
+            }
+            else
+            {
+                Node temp = Head;
+                while (temp != null)
+                {
+                    if (temp.Next.Data == data)
+                    {
+                        temp.Next = temp.Next.Next;
+                        Console.WriteLine("{0} Node deleted", data);
+                        break;
+                    }
+                    temp = temp.Next;
+
+                }
+            }
+        }
     }
 }

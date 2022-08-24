@@ -14,6 +14,7 @@
             Console.WriteLine("Press 6 for delete node at last ");
             Console.WriteLine("Press 7 for search a node");
             Console.WriteLine("Press 8 for insert node at specific position ");
+            Console.WriteLine("Press 9 for delete node at specific position ");
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -72,6 +73,15 @@
                     linkedList.DisplayNode();
                     Console.WriteLine(" 40 is adding");
                     linkedList.AddInBetween(40);
+                    linkedList.DisplayNode();
+                    break;
+                case 9:
+                    linkedList.AddNodeAtLast(56);
+                    linkedList.AddNodeAtLast(30);
+                    linkedList.AddNodeAtLast(40);
+                    linkedList.AddNodeAtLast(70);
+                    linkedList.DisplayNode();
+                    linkedList.DeleteInBetween(40);
                     linkedList.DisplayNode();
                     break;
                 default:
